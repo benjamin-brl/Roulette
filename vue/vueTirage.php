@@ -27,7 +27,7 @@
                                     <?= $info_absent['prenom'] ?>
                                 </td>
                                 <td>
-                                    <a href="?a=notes&c=<?=$get_classe?>&e=<?=$info_absent['id_Utilisateur']?>">Noter</a>
+                                    <a href="?a=notes&c=<?=$get_classe?>&e=<?=$info_absent['Id_Utilisateur']?>">Noter</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -50,10 +50,10 @@
                 <?php
                 foreach ($eleves as $info_eleve) { ?>
                     <tr>
-                        <td id="<?=$info_eleve['id_Utilisateur']?>">
+                        <td id="<?=$info_eleve['Id_Utilisateur']?>">
                             <?= $info_eleve['nom'] ?>
                         </td>
-                        <td id="<?=$info_eleve['id_Utilisateur']?>">
+                        <td id="<?=$info_eleve['Id_Utilisateur']?>">
                             <?= $info_eleve['prenom'] ?>
                         </td>
                     </tr>
@@ -93,7 +93,7 @@
         <ul>
             <?php foreach ($classes as $classe) { ?>
                 <li>
-                    <a href="?a=tirage&c=<?=$classe['id_c']?>"><?=$classe['nom_c']?></a>
+                    <a href="?a=tirage&c=<?=$classe['Id_Classe']?>"><?=$classe['nom']?></a>
                 </li>
             <?php } ?>
         </ul>

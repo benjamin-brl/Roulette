@@ -2,11 +2,11 @@
     <?php
     $classes = $Classe->getAllClasses();
     foreach ($classes as $classe) {
-        $eleves = $Eleve->getElevesByClasseID($classe['id_c']) ?>
+        $eleves = $Eleve->getElevesByClasseID($classe['Id_Classe']) ?>
         <section>
             <table>
                 <caption>
-                    <?= $Classe->getClasseByID($classe['id_c']) ?>
+                    <?= $Classe->getClasseByID($classe['Id_Classe']) ?>
                 </caption>
                 <thead>
                     <tr>
@@ -35,14 +35,14 @@
                             <td data-date="<?=$info_eleve['date_p']?>">
                             </td>
                             <td>
-                                <?= $Note->getMoyenneEleveByID($info_eleve['id_Utilisateur'])?>
+                                <?= $Note->getMoyenneEleveByID($info_eleve['Id_Utilisateur'])?>
                             </td>
                             <td>
-                                <a href="<?='?a=notes&c='.$classe['id_c'].'&e='.$info_eleve['id_Utilisateur']?>">Noter</a>
+                                <a href="<?='?a=notes&c='.$classe['Id_Classe'].'&e='.$info_eleve['Id_Utilisateur']?>">Noter</a>
                             </td>
                             <td>
                                 <form action="?a=eleves" method="post">
-                                    <input name="id_e" style="display: none" value="<?=$info_eleve['id_Utilisateur']?>">
+                                    <input name="id_e" style="display: none" value="<?=$info_eleve['Id_Utilisateur']?>">
                                     <input type="submit" value="Supprimer">
                                 </form>
                             </td>

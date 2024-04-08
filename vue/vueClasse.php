@@ -46,7 +46,7 @@
         <ul>
             <?php foreach ($classes as $classe) { ?>
                 <li>
-                    <a href="?a=classes&c=<?=$classe['id_c']?>"><?=$classe['nom_c']?></a>
+                    <a href="?a=classes&c=<?=$classe['Id_Classe']?>"><?=$classe['nom']?></a>
                 </li>
             <?php } ?>
         </ul>

@@ -14,21 +14,33 @@
     <header>
         <nav class="navbar">
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="?a=classes" class="nav-link">Classes</a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="?a=eleves" class="nav-link">Elèves</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="?a=tirage" class="nav-link">Tirage</a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="?a=notes" class="nav-link">Notes</a>
-                </li>
+                <?php if ($islog && $estProf) { ?>
+                    <li class="nav-item">
+                        <a href="?a=tirage" class="nav-link">Tirage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?a=classes" class="nav-link">Classes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?a=eleves" class="nav-link">Elèves</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="?a=notes" class="nav-link">Notes</a>
+                    </li>
+                <?php } elseif ($islog) { ?>
+                    <li class="nav-item">
+                        <a href="?a=moi" class="nav-link">Mon espace</a>
+                    </li>
+                <?php } if (!$islog) { ?>
+                    <li class="nav-item">
+                        <a href="?a=connexion" class="nav-link">Se connecter</a>
+                    </li>
+                <?php } else { ?>
+                    <li class="nav-item">
+                        <a href="?a=logout" class="nav-link">Se déconnecter</a>
+                    </li>
+                <?php } ?>
             </ul>
             <a href="?a=accueil" class="nav-branding">
                 <span>

@@ -37,7 +37,7 @@
                             </td>
                             <td>
                                 <form action="?a=notes&c=<?=$get_classe?>&e=<?=$get_eleve?>" method="post">
-                                    <input name="id_n" style="display: none" value="<?=$info_note['id_Note']?>">
+                                    <input name="id_n" style="display: none" value="<?=$info_note['Id_Note']?>">
                                     <input type="submit" value="Supprimer">
                                 </form>
                             </td>
@@ -53,7 +53,7 @@
             <ul>
                 <?php foreach ($eleves as $eleve) { ?>
                     <li>
-                        <a href="?a=notes&c=<?=$get_classe?>&e=<?=$eleve['id_e']?>"><?=$eleve['prenom_e'].' '.$eleve['nom_e']?></a>
+                        <a href="?a=notes&c=<?=$get_classe?>&e=<?=$eleve['Id_Utilisateur']?>"><?=$eleve['prenom'].' '.$eleve['nom']?></a>
                     </li>
                 <?php } ?>
             </ul>
@@ -66,7 +66,7 @@
     <ul>
         <?php foreach ($classes as $classe) { ?>
             <li>
-                <a href="?a=notes&c=<?=$classe['id_c']?>"><?=$classe['nom_c']?></a>
+                <a href="?a=notes&c=<?=$classe['Id_Classe']?>"><?=$classe['nom']?></a>
             </li>
         <?php } ?>
     </ul>
