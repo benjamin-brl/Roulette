@@ -11,7 +11,7 @@ if ($islog) {
             $post_date_note = isset($_POST['date_n']) ? $_POST['date_n'] : '';
 
             $post_absence == true ? $Eleve->addAbsence($get_eleve) : $Eleve->removeAbsence($get_eleve);
-            ($post_note && $post_date_note != '') ? ($Note->addNote($post_note, $post_date_note, $get_eleve) . $Eleve->setPassageByEleveID($get_eleve)) : '';
+            ($post_note && $post_date_note != '') ? ($Note->addNote($post_note, $post_date_note, $user['Id_Utilisateur'], $get_eleve) . $Eleve->setPassageByEleveID($get_eleve)) : '';
             $post_suppr_note = isset($_POST['id_n']) ? $_POST['id_n'] : '';
             $post_suppr_note != '' ? $Note->removeNote($post_suppr_note) : '';
         }
