@@ -3,14 +3,14 @@
     $eleves = $Eleve->getElevesByClasseID($get_classe);
     if (!empty($get_eleve)) { ?>
         <section>
-            <p>Nom :<?= $Eleve->getEleveByID($get_eleve)['nom_e'] ?></p>
-            <p>Prénom :<?= $Eleve->getEleveByID($get_eleve)['prenom_e'] ?></p>
+            <p>Nom :<?= $Eleve->getEleveByID($get_eleve)['nom'] ?></p>
+            <p>Prénom :<?= $Eleve->getEleveByID($get_eleve)['prenom'] ?></p>
             <p>Moyenne : <?= $Note->getMoyenneEleveByID($get_eleve) ?></p>
             <form action="./?a=notes&c=<?=$get_classe?>&e=<?=$get_eleve?>" method="POST">
                 <label for="absent">Noter absent :</label>
                 <input name="absent" id="absent" type="checkbox">
                 <label for="note">Nouvelle note :</label>
-                <input name="note" id="note" type="number" maxlength="2" max="20" min="0" placeholder="20 pour <?=$Eleve->getEleveByID($get_eleve)['prenom_e']?>">
+                <input name="note" id="note" type="number" maxlength="2" max="20" min="0" placeholder="20 pour <?=$Eleve->getEleveByID($get_eleve)['prenom']?>">
                 <label for="date_n">Date :</label>
                 <input name="date_n" id="date_n" type="date" value="<?=date("Y-m-d")?>">
                 <input type="submit" value="Valider" disabled>
@@ -37,7 +37,7 @@
                             </td>
                             <td>
                                 <form action="?a=notes&c=<?=$get_classe?>&e=<?=$get_eleve?>" method="post">
-                                    <input name="id_n" style="display: none" value="<?=$info_note['id_n']?>">
+                                    <input name="id_n" style="display: none" value="<?=$info_note['id_Note']?>">
                                     <input type="submit" value="Supprimer">
                                 </form>
                             </td>

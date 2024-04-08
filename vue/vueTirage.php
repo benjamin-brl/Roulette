@@ -21,13 +21,13 @@
                         foreach ($absents as $info_absent) { ?>
                             <tr>
                                 <td>
-                                    <?= $info_absent['nom_e'] ?>
+                                    <?= $info_absent['nom'] ?>
                                 </td>
                                 <td>
-                                    <?= $info_absent['prenom_e'] ?>
+                                    <?= $info_absent['prenom'] ?>
                                 </td>
                                 <td>
-                                    <a href="?a=notes&c=<?=$get_classe?>&e=<?=$info_absent['id_e']?>">Noter</a>
+                                    <a href="?a=notes&c=<?=$get_classe?>&e=<?=$info_absent['id_Utilisateur']?>">Noter</a>
                                 </td>
                             </tr>
                         <?php } ?>
@@ -50,11 +50,11 @@
                 <?php
                 foreach ($eleves as $info_eleve) { ?>
                     <tr>
-                        <td id="<?=$info_eleve['id_e']?>">
-                            <?= $info_eleve['nom_e'] ?>
+                        <td id="<?=$info_eleve['id_Utilisateur']?>">
+                            <?= $info_eleve['nom'] ?>
                         </td>
-                        <td id="<?=$info_eleve['id_e']?>">
-                            <?= $info_eleve['prenom_e'] ?>
+                        <td id="<?=$info_eleve['id_Utilisateur']?>">
+                            <?= $info_eleve['prenom'] ?>
                         </td>
                     </tr>
                 <?php } ?>
@@ -76,10 +76,10 @@
                 foreach ($eleves_tires as $info_eleve_tire) { ?>
                     <tr>
                         <td>
-                            <?= $info_eleve_tire['nom_e'] ?>
+                            <?= $info_eleve_tire['nom'] ?>
                         </td>
                         <td>
-                            <?= $info_eleve_tire['prenom_e'] ?>
+                            <?= $info_eleve_tire['prenom'] ?>
                         </td>
                     </tr>
                 <?php } ?>

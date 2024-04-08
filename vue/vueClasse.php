@@ -1,6 +1,7 @@
 <main>
     <?php if (!empty($get_classe)) {
-        $eleves = $Eleve->getElevesByClasseID($get_classe);?>
+        $eleves = $Eleve->getElevesByClasseID($get_classe);
+        ?>
     <section>
         <table>
             <caption>
@@ -23,13 +24,13 @@
                 foreach ($eleves as $info_eleve) { ?>
                     <tr>
                         <td>
-                            <?= $info_eleve['nom_e'] ?>
+                            <?= $info_eleve['nom'] ?>
                         </td>
                         <td>
-                            <?= $info_eleve['prenom_e'] ?>
+                            <?= $info_eleve['prenom'] ?>
                         </td>
                         <td>
-                            <?= $info_eleve['passage'] != 0 ? 'oui' : 'non' ?>
+                            <?= $info_eleve['passage'] == true ? 'oui' : 'non' ?>
                         </td>
                         <td data-date="<?=$info_eleve['date_p']?>">
                         </td>

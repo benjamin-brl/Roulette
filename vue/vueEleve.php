@@ -24,25 +24,25 @@
                     foreach ($eleves as $info_eleve) { ?>
                         <tr>
                             <td>
-                                <?= $info_eleve['nom_e'] ?>
+                                <?= $info_eleve['nom'] ?>
                             </td>
                             <td>
-                                <?= $info_eleve['prenom_e'] ?>
+                                <?= $info_eleve['prenom'] ?>
                             </td>
                             <td>
-                                <?= $info_eleve['passage'] != 0 ? 'oui' : 'non' ?>
+                                <?= $info_eleve['passage'] == true ? 'oui' : 'non' ?>
                             </td>
                             <td data-date="<?=$info_eleve['date_p']?>">
                             </td>
                             <td>
-                                <?= $Note->getMoyenneEleveByID($info_eleve['id_e'])?>
+                                <?= $Note->getMoyenneEleveByID($info_eleve['id_Utilisateur'])?>
                             </td>
                             <td>
-                                <a href="<?='?a=notes&c='.$classe['id_c'].'&e='.$info_eleve['id_e']?>">Noter</a>
+                                <a href="<?='?a=notes&c='.$classe['id_c'].'&e='.$info_eleve['id_Utilisateur']?>">Noter</a>
                             </td>
                             <td>
                                 <form action="?a=eleves" method="post">
-                                    <input name="id_e" style="display: none" value="<?=$info_eleve['id_e']?>">
+                                    <input name="id_e" style="display: none" value="<?=$info_eleve['id_Utilisateur']?>">
                                     <input type="submit" value="Supprimer">
                                 </form>
                             </td>
