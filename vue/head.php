@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="assets/favicon.svg" type="image/svg+xml">
     <title>Roulette</title>
 </head>
 
@@ -14,7 +14,6 @@
     <header>
         <nav class="navbar">
             <ul class="nav-menu">
-
                 <?php if ($islog && $estProf) { ?>
                     <li class="nav-item">
                         <a href="?a=tirage" class="nav-link">Tirage</a>
